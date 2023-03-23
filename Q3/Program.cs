@@ -30,11 +30,18 @@
             // Get the points P3.
             Point intersectionPoint1 = new Point((float)(cx2 + h * (p2.GetY() - p1.GetY()) / distanceOfTwoPoint),(float)(cy2 - h * (p2.GetX() - p1.GetX()) / distanceOfTwoPoint));
             Point intersectionPoint2 = new Point((float)(cx2 - h * (p2.GetY() - p1.GetY()) / distanceOfTwoPoint),(float)(cy2 + h * (p2.GetX() - p1.GetX()) / distanceOfTwoPoint));
-
-            Console.WriteLine("{0} \n{1} \n{2} \n{3}",intersectionPoint1.GetX(), intersectionPoint1.GetY(), intersectionPoint2.GetX(), intersectionPoint2.GetY());
+            
+            if(intersectionPoint1.GetX() == intersectionPoint1.GetX() && intersectionPoint2.GetY() == intersectionPoint2.GetY())
+            {
+                Console.WriteLine("{0} \n{1}",intersectionPoint1.GetX(), intersectionPoint1.GetY());
+            }
+            else
+            {
+                Console.WriteLine("{0} \n{1} \n{2} \n{3}",intersectionPoint1.GetX(), intersectionPoint1.GetY(), intersectionPoint2.GetX(), intersectionPoint2.GetY());
+            }
+            
             
         }
 
-        
     }
 }
